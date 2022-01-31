@@ -88,23 +88,7 @@ export default function PersoAddPage() {
 									required
 								/>
 							</Form.Group>
-							{group === 'pirates' && (
-								<Form.Group className="mb-3">
-									<Form.Label>Prime</Form.Label>
-									<Form.Control
-										type="text"
-										placeholder="Enter prime"
-										value={formAdd.prime}
-										onChange={e => {
-											let tmp = { ...formAdd }
-											tmp.prime = e.target.value
-											setFormAdd(tmp)
-										}}
-										required
-									/>
-								</Form.Group>
-							)}
-							{group === 'shichibukai' && (
+							{(group === 'pirates' || group === 'shichibukai') && (
 								<Form.Group className="mb-3">
 									<Form.Label>Prime</Form.Label>
 									<Form.Control
